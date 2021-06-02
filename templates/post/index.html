@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %} 
+{{ title }}
+{% endblock %}
+
+{% block body %} 
+<div class="row">
+<div class="col-12 col-md-12 col xl-12">
+<h5 style="text-align: right;">tem {{ todasMaterias.count }} materias cadastradas</h5>
+</div>
+</div>
+<div class="row">
+{%for questao in todasMaterias %}
+ <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+ <div class="col-12 col-md-5 col xl-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{questao.id}} - {{questao.titulo}}</h5>
+        <p class="card-text">{{questao.descricao}}... </p>
+        <a href="#" class="btn btn-primary">Saiba Mais</a>
+      </div>
+    </div>
+  </div>
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+{%endfor%}
+</div>
+
+
+
+
+{% endblock %}

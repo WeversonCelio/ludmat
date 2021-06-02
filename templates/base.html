@@ -1,0 +1,120 @@
+{% load static %}
+<!doctype html>
+  <!-- 
+    UNIVERSIDADE FEDERAL DO PARA
+    FACULDADE DE COMPUTACAO
+    CURSO BACHARELADO EM ENGENHARIA DE COMPUTACAO
+    DISCIPLINA: DESENVOLVIMENTO DE SOFTWARE PARA REDES DE COMPUTADORES E WEB
+    PROFESSOR: FABRICIO ALMEIDA ARAUJO
+    DISCENTES: 
+    TIAGO NUNES LIMA
+    WEVERSON CELIO SILVA DE LIMA
+  -->
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+
+    <link rel="shortcut icon" href="{% static "img/logo2.png" %}"  />
+    <title>   {% block title %} {% endblock %}  </title>
+  </head>
+  <body>
+
+<!--MENU-->
+
+
+  <!--MENU MENU MENU--->
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e4e11c;">
+    <!--Logo Logo Logo--->
+    <a class="navbar-brand" href="{% url 'index' %}">
+      <img src="{% static "img/logo1.png" %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      A Ludicidade e o Ensino da Matemática
+    </a>
+    <!--Logo Logo Logo--->
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link {% if page == 'index' %} active {% endif %}" href="{% url 'index' %}">Home</a>
+        <a class="nav-link {% if page == 'sobre' %} active {% endif %}" href="{% url 'sobre' %}">Sobre</a>
+         </div>
+  </nav>
+
+
+  <!--MENU MENU MENU--->
+
+<!--MENU-->
+<div class="container">
+{% block body %} {% endblock %}
+
+</div>
+
+
+
+  <!-- RODAPE RODAPE RODAPE-->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          A Ludicidade e o Ensino da Matemática: o uso dos jogos no
+          ensino-aprendizagem dos conteúdos matemáticos na escola
+          Ana Paula dos Santos e Santos no município de Castanhal.
+        </p>
+      </section>
+      <!-- Section: Text -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://ufpa.br">A Ludicidade e o Ensino da Matemática</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- RODAPE RODAPE RODAPE-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/jquery-3.5.1.slim.min.js" %}"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+
+
+
+
+  </body>
+</html>
