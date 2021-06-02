@@ -71,6 +71,7 @@
     <!-- formulario de contato -->
     <h2>Fale conosco </h2>
     <form action="" method="post">
+      {% csrf_token %}
       <div class="form-group">
         <label>Nome:</label>
         <input type="text" class="form-control" id="nome" name="nome">
