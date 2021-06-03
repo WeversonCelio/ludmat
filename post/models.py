@@ -11,8 +11,7 @@ class Materia(models.Model):
     
 
 class Relacionada(models.Model):
-    materia_relacionada = models.ForeignKey(Materia, on_delete=models.CASCADE)
-    observacao = models.CharField(max_length=200)
+    proxima_materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
 
 
 

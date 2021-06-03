@@ -16,7 +16,7 @@ def index(request):
         'page' : "index",
         'todasMaterias' : todasMaterias
     }
-    return render(request,"post/index.html", context)
+    return render(request,"site/index.html", context)
 
 def sobre(request):
     if request.method == 'POST':
@@ -37,4 +37,18 @@ def sobre(request):
         'title': "SOBRE",
         'page' : "sobre"
     }
-    return render(request,"post/sobre.html", context)
+    return render(request,"site/sobre.html", context)
+
+
+def post(request):
+    materiaDb = Materia
+    todasMaterias = materiaDb.objects.all()
+    elemento = todasMaterias.get(id=1)
+    
+    context = {
+        'title': "POST",
+        'page' : "index",
+        'todasMaterias' : todasMaterias,
+        'elemento' : elemento
+    }
+    return render(request,"post/post.html", context)

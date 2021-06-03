@@ -1,0 +1,2 @@
+sobre.html
+->   <img src="#/celio.jpg" width="50%" height="50%" alt="" class="img-thumbnail rounded-circle">

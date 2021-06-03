@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block title %} 
+{{ title }}
+{% endblock %}
+
+
+
+
+
+{% block body %} 
+<!-- LINHA 1 LINHA 1 LINHA 1 -->
+        <div class="row">
+            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+            <div class="col-12 col-md-12 xl-12">
+                <!-- titulo pagina -->
+                <h2>{{elemento.titulo}}</h2>
+            </div>
+            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+        </div>
+        <!-- LINHA 1 LINHA 1 LINHA 1 -->
+
+        <!-- linha de espacamento -->
+        <div class="row">
+            <div class="col-12">
+                <p></p>
+            </div>
+        </div>
+        <!-- linha de espacamento -->
+
+
+
+
+        <!-- LINHA 2 LINHA 2 LINHA 2 -->
+        <div class="row">
+            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+            <article class="col-12 col-md-8 col-xl-9">
+                <!-- imagem pagina -->
+                <img src="{{elemento.img_post.url}}" class="img-fluid rounded mx-auto d-block" alt="post">
+                <!-- texto materia -->
+                <p>
+                    {{elemento.texto_post}}
+                </p>
+            </article>
+            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+
+            <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
+            <aside class="col-12 col-md-4 col-xl-3">
+                <!-- link relacionados -->
+                <h3>Materias Relacionadas</h3>
+
+                      <!-- card 1 -->
+                <div class="card" style="width: 18rem;">
+                    <img src="../img/img2.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">O Papel dos Jogos na Educação</h5>
+                        <p class="card-text">Evidências sobre o uso do jogo no ensino de matemática têm sido muito 
+                            frequentes..
+            .</p>
+                        <a href="post2.html" class="btn btn-primary stretched-link">Saiba Mais</a>
+                    </div>
+                </div>
+
+
+                         <!-- card 2 -->
+                         <div class="card" style="width: 18rem;">
+                            <img src="../img/img3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">A Importância dos Jogos no Processo  de Aprendizagem</h5>
+                                <p class="card-text">Os professores que ensinam matemática, muitas vezes sentem a 
+                                    dificuldade apresentada
+                                    ...</p>
+                                <a href="../post/post3.html" class="btn btn-primary stretched-link">Saiba Mais</a>
+                            </div>
+                        </div>
+
+
+            </aside>
+            <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
+        </div>
+        <!-- LINHA 2 LINHA 2 LINHA 2 -->
+
+
+
+
+
+
+
+
+
+          <!-- linha de espacamento -->
+          <div class="row">
+            <div class="col-12">
+                <p></p>
+            </div>
+        </div>
+        <!-- linha de espacamento -->
+
+
+
+        <!-- LINHA 4 LINHA 4 LINHA 4 -->
+        <div class="row">
+            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+            <div class="col-12 col-md-12 xl-12">
+                <!-- comentario -->
+                <h3>Comente este post: </h3>
+
+                <!--comentario-->
+    <div class="row">
+        <div class="col">
+          <form>
+            <!-- Name input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="form4Example1" class="form-control" />
+              <label class="form-label" for="form4Example1">Nome</label>
+            </div>
+          
+          
+            <!-- Message input -->
+            <div class="form-outline mb-4">
+              <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+              <label class="form-label" for="form4Example3">Sua mensagem</label>
+            </div>
+          
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
+          </form>
+        </div>
+      </div>
+       <!--comentario-->
+            </div>
+            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+        </div>
+        <!-- LINHA 4 LINHA 4 LINHA 4 -->
+
+
+
+
+
+
+
+
+{% endblock %}
