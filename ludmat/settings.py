@@ -44,7 +44,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'post.apps.PostConfig',
+    'post.apps.PostConfig', ## instalacao do appp post
+    'slide.apps.SlideConfig', # instalacao do appp slide fotos
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

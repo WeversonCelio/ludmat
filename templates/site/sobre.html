@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 {{ title }}
@@ -34,7 +35,7 @@
   <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
   <div class="col-12 col-md-6 xl-6">
     <!-- autor 1 -->
-    <img src="#/tiago.jpg" width="50%" height="50%" alt="" class="img-thumbnail rounded-circle">
+    <img src="{% static 'img/tiago.jpg' %}" width="50%" height="50%" alt="" class="img-thumbnail rounded-circle">
     <h4>TIAGO NUNES LIMA </h4>
     <p>
       ● Graduado em Matemática pela Universidade Federal do Pará (UFPA) Campus de Castanhal; <br>
@@ -49,7 +50,7 @@
   <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
   <div class="col-12 col-md-6 xl-6">
     <!-- autor 1 -->
-    <img src="#/celio.jpg" width="50%" height="50%" alt="" class="img-thumbnail rounded-circle">
+    <img src="{% static 'img/celio.jpg' %}" width="50%" height="50%" alt="" class="img-thumbnail rounded-circle">
     <h4>WEVERSON CELIO SILVA DE LIMA </h4>
     <p>
       ● Graduando em Engenharia de Computação pela Universidade Federal do Pará (UFPA) – Campus de Castanhal; <br>
