@@ -14,4 +14,13 @@ class Relacionada(models.Model):
     proxima_materia = models.ForeignKey(Materia, on_delete=models.CASCADE)
 
 
+class Anterior(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    anterior = models.ForeignKey(Materia, on_delete=models.CASCADE)
+
+
+class Proxima(models.Model):
+    proximo = models.ForeignKey(Materia, on_delete=models.CASCADE)
+
+
 
