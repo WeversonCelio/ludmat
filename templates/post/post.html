@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} 
+{% block title %}
 {{ title }}
 {% endblock %}
 
@@ -7,135 +7,93 @@
 
 
 
-{% block body %} 
+{% block body %}
 <!-- LINHA 1 LINHA 1 LINHA 1 -->
-        <div class="row">
-            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-            <div class="col-12 col-md-12 xl-12">
-                <!-- titulo pagina -->
-                <h2>{{elemento.titulo}}</h2>
-            </div>
-            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-        </div>
-        <!-- LINHA 1 LINHA 1 LINHA 1 -->
+<div class="row">
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+  <div class="col-12 col-md-12 xl-12">
+    <!-- titulo pagina -->
+    <h2>{{elemento.titulo}}</h2>
+  </div>
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+</div>
+<!-- LINHA 1 LINHA 1 LINHA 1 -->
 
-        <!-- linha de espacamento -->
-        <div class="row">
-            <div class="col-12">
-                <p></p>
-            </div>
-        </div>
-        <!-- linha de espacamento -->
+<!-- LINHA 2 LINHA 2 LINHA 2 -->
+<div class="row">
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+  <article class="col-12 col-md-8 col-xl-9">
+    <!-- imagem pagina -->
+    <img src="{{elemento.img_post.url}}" class="img-fluid rounded mx-auto d-block" alt="post">
+    <!-- texto materia -->
+    <p>
+      {{elemento.texto_post}}
+    </p>
+  </article>
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
 
+  <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
+  <aside class="col-12 col-md-4 col-xl-3">
+    <!-- link relacionados -->
+    <h3>Materias Relacionadas</h3>
 
-
-
-        <!-- LINHA 2 LINHA 2 LINHA 2 -->
-        <div class="row">
-            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-            <article class="col-12 col-md-8 col-xl-9">
-                <!-- imagem pagina -->
-                <img src="{{elemento.img_post.url}}" class="img-fluid rounded mx-auto d-block" alt="post">
-                <!-- texto materia -->
-                <p>
-                    {{elemento.texto_post}}
-                </p>
-            </article>
-            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-
-            <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
-            <aside class="col-12 col-md-4 col-xl-3">
-                <!-- link relacionados -->
-                <h3>Materias Relacionadas</h3>
-
-                      <!-- card 1 -->
-                      <div class="card" style="width: 18rem;">
-                        <img src="{{anterior.img_post.url}}" class="card-img-top" alt="...">
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">{{anterior.id}} - {{anterior.titulo}}</h5>
-                              <p class="card-text">{{anterior.descricao}}... </p>
-                              <a href="{{proximo.img_post.url}}" class="btn btn-primary">Saiba Mais</a>
-                            </div>
-                    </div>
-
-
-
-                         <!-- card 2 -->
-                         <div class="card" style="width: 18rem;">
-                            <img src="{{proxima.img_post.url}}" class="card-img-top" alt="...">
-                            <div class="card">
-                                <div class="card-body">
-                                  <h5 class="card-title">{{proximo.id}} - {{proximo.titulo}}</h5>
-                                  <p class="card-text">{{proximo.descricao}}... </p>
-                                  <a href="{% url 'post' proximo.id  %}" class="btn btn-primary">Saiba Mais</a>
-                                </div>
-                        </div>
-
-
-            </aside>
-            <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
-        </div>
-        <!-- LINHA 2 LINHA 2 LINHA 2 -->
-
-
-
-
-
-
-
-
-
-          <!-- linha de espacamento -->
-          <div class="row">
-            <div class="col-12">
-                <p></p>
-            </div>
-        </div>
-        <!-- linha de espacamento -->
-
-
-
-        <!-- LINHA 4 LINHA 4 LINHA 4 -->
-        <div class="row">
-            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-            <div class="col-12 col-md-12 xl-12">
-                <!-- comentario -->
-                <h3>Comente este post: </h3>
-
-                <!--comentario-->
-    <div class="row">
-        <div class="col">
-          <form>
-            <!-- Name input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="form4Example1" class="form-control" />
-              <label class="form-label" for="form4Example1">Nome</label>
-            </div>
-          
-          
-            <!-- Message input -->
-            <div class="form-outline mb-4">
-              <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-              <label class="form-label" for="form4Example3">Sua mensagem</label>
-            </div>
-          
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">Enviar</button>
-          </form>
+    <!-- card 1 -->
+    <div class="card" style="width: 18rem;">
+      <img src="{{anterior.img_post.url}}" class="card-img-top" alt="...">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{anterior.id}} - {{anterior.titulo}}</h5>
+          <p class="card-text">{{anterior.descricao}}... </p>
+          <a href="{{proximo.img_post.url}}" class="btn btn-primary">Saiba Mais</a>
         </div>
       </div>
-       <!--comentario-->
-            </div>
-            <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+
+
+
+      <!-- card 2 -->
+      <div class="card" style="width: 18rem;">
+        <img src="{{proxima.img_post.url}}" class="card-img-top" alt="...">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{proximo.id}} - {{proximo.titulo}}</h5>
+            <p class="card-text">{{proximo.descricao}}... </p>
+            <a href="{% url 'post' proximo.id  %}" class="btn btn-primary">Saiba Mais</a>
+          </div>
         </div>
-        <!-- LINHA 4 LINHA 4 LINHA 4 -->
+
+
+  </aside>
+  <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
+</div>
+<!-- LINHA 2 LINHA 2 LINHA 2 -->
 
 
 
-
-
-
-
-
+<!-- LINHA 1 LINHA 1 LINHA 1 -->
+<div class="row">
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+  <div class="col-12 col-md-12 xl-12">
+    <!-- formulario de comentario -->
+    <h2>Comentario</h2>
+    <form action="" method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label>Nome:</label>
+        <input type="text" class="form-control" id="nome" name="nome">
+      </div>
+      <div class="form-group">
+        <label>Seu comentario</label>
+        <textarea class="form-control" id="mensagem" name="mensagem" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+</div>
+   <!-- linha de espacamento -->
+<div class="row">
+  <div class="col-12">
+    <p></p>
+  </div>
+</div>
+<!-- linha de espacamento -->
 {% endblock %}

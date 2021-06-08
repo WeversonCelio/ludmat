@@ -56,6 +56,20 @@ def post(request,id):
     todosproximo = proximoDb.objects.all()
     proximo = todosproximo.get(id=id)
 
+
+    # enviar comentario via e-mail
+    if request.method == 'POST':
+        mensagem = "Comentario do Post " + str(elemento.id) + " - " + elemento.titulo  + "\n" 
+        mensagem +="Nome: "+request.POST['nome']+"\n"
+        mensagem +="Comentario: "+request.POST['mensagem']+"\n"
+        send_mail(
+            'Comentario LudMat:',
+            mensagem,
+            'from@example.com',
+            ['weversoncelio25@gmail.com'],
+            fail_silently=False,
+        )
+
     
     
     context = {
