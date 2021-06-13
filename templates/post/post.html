@@ -44,7 +44,7 @@
         <div class="card-body">
           <h5 class="card-title">{{anterior.id}} - {{anterior.titulo}}</h5>
           <p class="card-text">{{anterior.descricao}}... </p>
-          <a href="{{proximo.img_post.url}}" class="btn btn-primary">Saiba Mais</a>
+          <a href="{% url 'post' anterior.id  %}" class="btn btn-primary">Saiba Mais</a>
         </div>
       </div>
 
@@ -52,7 +52,7 @@
 
       <!-- card 2 -->
       <div class="card" style="width: 18rem;">
-        <img src="{{proxima.img_post.url}}" class="card-img-top" alt="...">
+        <img src="{{proximo.img_post.url}}" class="card-img-top" alt="...">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">{{proximo.id}} - {{proximo.titulo}}</h5>

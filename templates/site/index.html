@@ -2,108 +2,105 @@
 {% load static %}
 
 
-{% block title %} 
+{% block title %}
 {{ title }}
 {% endblock %}
 
-{% block body %} 
+{% block body %}
 
 
 
 
-    <!-- LINHA 1 LINHA 1 LINHA 1 -->
-    <div class="row">
-      <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-      <div class="col-12 col-md-8 col-xl-8">
-        <!-- Carousel Carousel Carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <!-- indicatidores do cursor -->
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-          </ol>
-          <!-- indicatidores do cursor -->
-          <!-- item item item -->
-          <div class="carousel-inner">
-            <!-- item 1 -->
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="{% static 'img/slide/img1.jpg' %}" alt="First slide">
-              <div class="carousel-caption d-none d-block">
-                <a href="{% url 'post' 1 %}">
-                  <h5 class="titulocorousel">Introdução</h5>
-                </a>
-              </div>
-            </div>
-            <!-- item 2 -->
-            <div class="carousel-item ">
-              <img class="d-block w-100" src="{% static 'img/slide/img2.jpeg' %}" alt="First slide">
-              <div class="carousel-caption d-none d-block">
-                <a href="{% url 'post' 2 %}">
-                  <h5 class="titulocorousel"> O Papel dos Jogos na Educação</h5>
-                </a>
-              </div>
-            </div>
-            <!-- item 3 -->
-            <div class="carousel-item ">
-              <img class="d-block w-100" src="{% static 'img/slide/img3.jpg' %}" alt="First slide">
-              <div class="carousel-caption d-none d-block">
-                <a href="{% url 'post' 4 %}">
-                  <h5 class="titulocorousel">A Importância dos Jogos no Processo de Aprendizagem</h5>
-                </a>
-              </div>
-            </div>
-            <!-- item 4 -->
-            <div class="carousel-item ">
-              <img class="d-block w-100" src="{% static 'img/slide/img4.jpg' %}" alt="First slide">
-              <div class="carousel-caption d-none d-block">
-                <a href="{% url 'post' 5 %}">
-                  <h5 class="titulocorousel">Caracterizações de um Jogo</h5>
-                </a>
-              </div>
-            </div>
-            <!-- item 5 -->
-            <div class="carousel-item ">
-              <img class="d-block w-100" src="{% static 'img/slide/img5.jpg' %}" alt="First slide">
-              <div class="carousel-caption d-none d-block">
-                <a href="post/post5.html">
-                  <h5 class="titulocorousel">Objetivos do Jogo</h5>
-                </a>
-              </div>
-            </div>
-            <!-- item item item -->
-            <!-- botao corousel-->
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Anterior</span>
+<!-- LINHA 1 LINHA 1 LINHA 1 -->
+<div class="row">
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+  <div class="col-12 col-md-12 col-xl-9">
+    <!-- Carousel Carousel Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <!-- indicatidores do cursor -->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      </ol>
+      <!-- indicatidores do cursor -->
+      <!-- item item item -->
+      <div class="carousel-inner">
+        <!-- item 1 -->
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="{% static 'img/slide/img1.jpg' %}" alt="First slide">
+          <div class="carousel-caption d-none d-block">
+            <a href="{% url 'post' 1 %}">
+              <h5 class="titulocorousel">Introdução</h5>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Proximo</span>
-            </a>
-            <!-- botao corousel-->
           </div>
-          <!-- Carousel Carousel Carousel -->
-          <h1></h1>
-          <h1></h1>
-
         </div>
+        <!-- item 2 -->
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="{% static 'img/slide/img2.jpeg' %}" alt="First slide">
+          <div class="carousel-caption d-none d-block">
+            <a href="{% url 'post' 2 %}">
+              <h5 class="titulocorousel"> O Papel dos Jogos na Educação</h5>
+            </a>
+          </div>
+        </div>
+        <!-- item 3 -->
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="{% static 'img/slide/img3.jpg' %}" alt="First slide">
+          <div class="carousel-caption d-none d-block">
+            <a href="{% url 'post' 3 %}">
+              <h5 class="titulocorousel">A Importância dos Jogos no Processo de Aprendizagem</h5>
+            </a>
+          </div>
+        </div>
+        <!-- item 4 -->
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="{% static 'img/slide/img4.jpg' %}" alt="First slide">
+          <div class="carousel-caption d-none d-block">
+            <a href="{% url 'post' 4 %}">
+              <h5 class="titulocorousel">Caracterizações de um Jogo</h5>
+            </a>
+          </div>
+        </div>
+        <!-- item 5 -->
+        <div class="carousel-item ">
+          <img class="d-block w-100" src="{% static 'img/slide/img5.jpg' %}" alt="First slide">
+          <div class="carousel-caption d-none d-block">
+            <a href="{% url 'post' 5 %}">
+              <h5 class="titulocorousel">Objetivos do Jogo</h5>
+            </a>
+          </div>
+        </div>
+        <!-- item item item -->
+        <!-- botao corousel-->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Proximo</span>
+        </a>
+        <!-- botao corousel-->
       </div>
-      <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-
-      <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
-      <h5 style="text-align: right;">tem {{ todasMaterias.count }} materias cadastradas</h5>
-    
-      <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
+      <!-- Carousel Carousel Carousel -->
+      <h1></h1>
+      <h1></h1>
 
     </div>
-    <!-- LINHA 1 LINHA 1 LINHA 1 -->
+  </div>
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
 
+  <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
+  <div class="col-12 col-md-12 col-xl-2">
+    <h5 style="text-align: right;">tem {{ todasMaterias.count }} materias cadastradas</h5>
+  </div>
+  <!-- COLUNA 2 COLUNA 2 COLUNA 2 -->
 
-
-
+</div>
+<!-- LINHA 1 LINHA 1 LINHA 1 -->
 
 
 
@@ -111,9 +108,9 @@
 
 
 <div class="row">
-{%for questao in todasMaterias %}
- <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
- <div class="col-12 col-md-5 col xl-5">
+  {%for questao in todasMaterias %}
+  <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
+  <div class="col-12 col-md-5 col xl-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">{{questao.id}} - {{questao.titulo}}</h5>
@@ -123,7 +120,7 @@
     </div>
   </div>
   <!-- COLUNA 1 COLUNA 1 COLUNA 1 -->
-{%endfor%}
+  {%endfor%}
 </div>
 
 

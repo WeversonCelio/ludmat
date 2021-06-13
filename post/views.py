@@ -46,15 +46,19 @@ def post(request,id):
     todasMaterias = materiaDb.objects.all()
     elemento = todasMaterias.get(id=id)
 
+    titulo = "POST " + str(elemento.id) + " | " + elemento.titulo
+
     # buscar os atributos no banco de dado da materia relacionadas
     anteriorDb = Anterior
     todasAnterior = anteriorDb.objects.all()
-    anterior = todasAnterior.get(id=id)
+    anteriorId = todasAnterior.get(anterior=id)
+    anteriorPost = todasMaterias.get(id=anteriorId.id)
 
     # buscar os atributos no banco de dado da materia relacionadas
     proximoDb = Proxima
-    todosproximo = proximoDb.objects.all()
-    proximo = todosproximo.get(id=id)
+    todosProximos = proximoDb.objects.all()
+    proximoId = todosProximos.get(proximo=id)
+    proximoPost = todasMaterias.get(id=proximoId.id)
 
 
     # enviar comentario via e-mail
@@ -73,11 +77,11 @@ def post(request,id):
     
     
     context = {
-        'title': "POST",
+        'title': titulo,
         'page' : "index",
         'todasMaterias' : todasMaterias,
         'elemento' : elemento,
-        'anterior' : anterior,
-        'proximo' : proximo
+        'anterior' : anteriorPost,
+        'proximo' : proximoPost
     }
     return render(request,"post/post.html", context)

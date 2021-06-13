@@ -20,6 +20,7 @@ class Anterior(models.Model):
 
 
 class Proxima(models.Model):
+    id = models.BigAutoField(primary_key=True)
     proximo = models.ForeignKey(Materia, on_delete=models.CASCADE)
 
 
