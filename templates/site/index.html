@@ -43,7 +43,7 @@
         <div class="carousel-item ">
           <img class="d-block w-100" src="{{questao.img_post.url}}" alt="First slide">
           <div class="carousel-caption d-none d-block">
-            <a href="{% url 'post' 2 %}">
+            <a href="{% url 'post' questao.id %}">
               <h5 class="titulocorousel"> {{questao.titulo}}</h5>
             </a>
           </div>
